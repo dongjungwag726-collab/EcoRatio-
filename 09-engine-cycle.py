@@ -6,6 +6,7 @@ import matplotlib.font_manager as fm
 # 한글 폰트 설정
 plt.rcParams['font.family'] = 'NanumGothic'
 plt.rcParams['axes.unicode_minus'] = False
+fm._load_fontmanager(try_read_cache=False)
 # -------------------------------------------------------
 # 차종 데이터
 # -------------------------------------------------------
