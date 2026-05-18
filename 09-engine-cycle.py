@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 한글 폰트 설정
-plt.rcParams['font.family'] = 'Malgun Gothic'
+import koreanize_matplotlib
 plt.rcParams['axes.unicode_minus'] = False
 
 # -------------------------------------------------------
