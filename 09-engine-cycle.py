@@ -1,11 +1,11 @@
 import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
 
 # 한글 폰트 설정
-import koreanize_matplotlib
+plt.rcParams['font.family'] = 'NanumGothic'
 plt.rcParams['axes.unicode_minus'] = False
-
 # -------------------------------------------------------
 # 차종 데이터
 # -------------------------------------------------------
