@@ -4,11 +4,14 @@ import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 import os
 
-# 한글 폰트 설정 (배포 환경)
-font_path = '/usr/share/fonts/truetype/nanum/NanumGothic.ttf'
-if os.path.exists(font_path):
-    font = fm.FontProperties(fname=font_path)
-    plt.rcParams['font.family'] = font.get_name()
+# 한글 폰트 설정 (로컬/배포 자동 감지)
+if os.name == 'nt':  # Windows (로컬)
+    plt.rcParams['font.family'] = 'Malgun Gothic'
+else:  # Linux (배포)
+    font_path = '/usr/share/fonts/truetype/nanum/NanumGothic.ttf'
+    if os.path.exists(font_path):
+        fm.fontManager.addfont(font_path)
+        plt.rcParams['font.family'] = 'NanumGothic'
 plt.rcParams['axes.unicode_minus'] = False
 # -------------------------------------------------------
 # 차종 데이터
